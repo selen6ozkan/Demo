@@ -1,45 +1,3 @@
-
-.card{
-    margin-bottom: 15px;
-    border-radius: 20px;
-    border-style: none;
-   
-}
-.card li {
-    margin: 20px 0;
-
-}
-.nav-link{
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    height: 30px;
-}
-
-.card li a svg{
-    margin-right: 15px;
-}
-
-.card .active{
-    color: blue;
- 
-
-}
-.comment{
-    padding: 20px;
-
-}
-.card .nav-right{
-    padding: 20px;
-}
-
-.card .nav-right .bottom{
-    margin-top: 15px;
-    line-height: 0%;
-}
-.card .nav-right .svg{
-    padding: 0 25px;
-}
 .main-container{
     display: flex;
     justify-content:space-evenly;
@@ -47,4 +5,42 @@
     padding: 20px;
 
 }
+.card{
+    border-radius: 20px;
+    border-style: none;
+}
+.card-title{
+    margin: 20px ;
+    font-weight: bold;
+}
+.card-body{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card li {
+    margin: 15px 0;
+    list-style: none;
+
+}
+.card li a{
+   margin-left: 20px;
+   list-style: none;
+   text-decoration: none;
+   color:#9798B4;
+
+}
+
+.card-comment{
+    margin-top: 15px;
+    line-height: 0%;
+    text-align: center;
+    color:#34343F;
+}
+.card-comment p{
+    color: #46466599;
+}
+
+
+
 
