@@ -1,0 +1,50 @@
+
+.card{
+    margin-bottom: 15px;
+    border-radius: 20px;
+    border-style: none;
+   
+}
+.card li {
+    margin: 20px 0;
+
+}
+.nav-link{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    height: 30px;
+}
+
+.card li a svg{
+    margin-right: 15px;
+}
+
+.card .active{
+    color: blue;
+ 
+
+}
+.comment{
+    padding: 20px;
+
+}
+.card .nav-right{
+    padding: 20px;
+}
+
+.card .nav-right .bottom{
+    margin-top: 15px;
+    line-height: 0%;
+}
+.card .nav-right .svg{
+    padding: 0 25px;
+}
+.main-container{
+    display: flex;
+    justify-content:space-evenly;
+    background-color: #E5E5E5;
+    padding: 20px;
+
+}
+

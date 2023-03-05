@@ -1,0 +1,72 @@
+.navbar {
+  padding: 0 60px;
+  margin: 10px;
+}
+.brand {
+  cursor: pointer;
+}
+.link-btn {
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  font-size: 0.8em;
+  padding: 0px;
+  margin-right: 50px;
+}
+
+.link-btn:hover {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  font-size: 0.8em;
+  padding: 0px;
+}
+.vr {
+  margin-right: 30px;
+  color: #c6c8c9;
+}
+.profile {
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+}
+.profile a {
+  margin-left: 15px;
+}
+.profile span{
+  color: black;
+}
+.profile svg {
+  margin-right: 15px;
+}
+.burger {
+  list-style: none;
+  display: none;
+}
+
+
+@media screen and (max-width: 1023px) {
+  .menu {
+    display: none;
+  }
+  .burger{
+    display: block;
+  }
+  .search {
+    display: block;
+  }
+}
+@media screen and (max-width: 567px) {
+  .menu {
+    display: none;
+  }
+  .search{
+    display: none;
+  }
+ 
+}

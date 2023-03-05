@@ -1,0 +1,36 @@
+.container-fluid{
+    background-color:#060740 ;
+    
+}
+.row{
+    padding: 0 40px;
+}
+.icon li{
+    float: left;
+   margin-right:25px;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+   line-height: 32px;
+}
+h5{
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 1023px) {
+    div:nth-child(2) {
+
+    }
+   
+  }
+  @media screen and (max-width: 567px) {
+    div:nth-child(2) {
+        display: none;
+    }
+    div:nth-child(3) {
+        display: none;
+    }
+   
+  }
