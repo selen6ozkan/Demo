@@ -13,6 +13,10 @@ import { Comment } from 'src/app/model/comments';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+
+  public albumsPerPage=3;
+  public selectedPage=1;
+
   constructor(
     private albumRepository:AlbumRepository,
     private photoRepository:PhotoRepository,
