@@ -28,17 +28,18 @@
    list-style: none;
    text-decoration: none;
    color:#9798B4;
+   cursor: pointer;
 
 }
 
+.profile span{
+    margin-left: 30px;
+}
 .card-comment{
-    margin-top: 15px;
-    line-height: 0%;
-    text-align: center;
-    color:#34343F;
+
 }
 .card-comment p{
-    color: #46466599;
+    /* color: #46466599; */
 }
 
 

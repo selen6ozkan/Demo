@@ -14,6 +14,15 @@ import { Comment } from 'src/app/model/comments';
 })
 export class HomeComponent {
 
+
+  slides = [
+    'https://via.placeholder.com/600/92c952',
+    'https://cdn.mijnreservering.info/janvanrossum/38medium.jpg',
+    'https://cdn.mijnreservering.info/janvanrossum/39medium.jpg',
+    'https://cdn.mijnreservering.info/janvanrossum/40medium.jpg',
+    'https://cdn.mijnreservering.info/janvanrossum/41medium.jpg'
+  ];
+
   public albumsPerPage=3;
   public selectedPage=1;
 
@@ -32,4 +41,5 @@ export class HomeComponent {
     get comments():Comment[]{
       return this.commentRepository.getComments();
     }
+
 }

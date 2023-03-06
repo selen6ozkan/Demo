@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
@@ -11,6 +11,8 @@ import { AlbumRepository } from './model/albumRepository';
 import { PhotoRepository } from './model/photoRepository';
 import { CommentRepository } from './model/commentRepository';
 import { DataService } from './model/dataService';
+import { HammerjsCarouselModule } from 'ngx-hammerjs-carousel';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 
 
@@ -24,13 +26,19 @@ import { DataService } from './model/dataService';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    HammerjsCarouselModule
   ],
   providers: [
     AlbumRepository,
     PhotoRepository,
     CommentRepository,
-    DataService],
+    DataService,
+    
+  ],
+    schemas: [
+      CUSTOM_ELEMENTS_SCHEMA
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
