@@ -11,9 +11,8 @@ import { AlbumRepository } from './model/albumRepository';
 import { PhotoRepository } from './model/photoRepository';
 import { CommentRepository } from './model/commentRepository';
 import { DataService } from './model/dataService';
-import { HammerjsCarouselModule } from 'ngx-hammerjs-carousel';
-import { NgImageSliderModule } from 'ng-image-slider';
 
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 
 @NgModule({
@@ -27,13 +26,13 @@ import { NgImageSliderModule } from 'ng-image-slider';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    HammerjsCarouselModule
+    SlickCarouselModule
   ],
   providers: [
     AlbumRepository,
     PhotoRepository,
     CommentRepository,
-    DataService,
+    DataService
     
   ],
     schemas: [

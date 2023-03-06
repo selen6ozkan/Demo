@@ -10,6 +10,7 @@ export class PhotoRepository implements OnInit{
         this.dataService
         .getPhotos()
         .subscribe(photos=>this.photos=photos);
+       
     }
 
     ngOnInit(){

@@ -1,30 +1,31 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { Album } from 'src/app/model/albums';
 import { Photo } from 'src/app/model/photos';
 import { AlbumRepository } from 'src/app/model/albumRepository';
 import { PhotoRepository } from 'src/app/model/photoRepository';
 import { CommentRepository } from 'src/app/model/commentRepository';
 import { Comment } from 'src/app/model/comments';
+import { DataService } from 'src/app/model/dataService';
 
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit  {
 
+  items: any[];
 
-  slides = [
-    'https://via.placeholder.com/600/92c952',
-    'https://cdn.mijnreservering.info/janvanrossum/38medium.jpg',
-    'https://cdn.mijnreservering.info/janvanrossum/39medium.jpg',
-    'https://cdn.mijnreservering.info/janvanrossum/40medium.jpg',
-    'https://cdn.mijnreservering.info/janvanrossum/41medium.jpg'
-  ];
+    slideConfig = {
+    autoplay: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true
+  };
+  
 
-  public albumsPerPage=3;
-  public selectedPage=1;
 
   constructor(
     private albumRepository:AlbumRepository,
@@ -42,4 +43,23 @@ export class HomeComponent {
       return this.commentRepository.getComments();
     }
 
+
+
+    ngOnInit() {
+      this.items=this.albumRepository.getAlbums()
+      .map(albums=>{
+        const filteredPhotos=this.photos.filter(photo =>photo.albumId===albums.id);
+        return{
+          title:albums.title,
+          photos:filteredPhotos
+        }
+      })
+    }
+  
+    
+  
+  
+  
+  
+   
 }
