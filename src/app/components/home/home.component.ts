@@ -19,18 +19,6 @@ export class HomeComponent implements OnInit  {
   albums:Album[]=[];
   comments:Comment[]=[];
   items: any[];
-  photosByAlbum: { [key: string]: any[] } = {};
-  albums$:Observable<any[]>
-  
-   
-
-    slideConfig = {
-    autoplay: true,
-    slidesToShow: 5,
-    slidesToScroll: 5,
-    arrows: true
-    };
-  
 
 
   constructor(private dataService:DataService){}
@@ -39,15 +27,6 @@ export class HomeComponent implements OnInit  {
       this.getPhotos();
       this.getAlbums();
       this.getComments();
-
-      //  this.items = this.albums.map(album => {
-      //    const filteredPhotos = this.photos.filter(photo => photo.albumId === album.id);
-      //   return{
-      //     title:album.title,
-      //     photos:filteredPhotos
-      //   }
-      //  })
-       
      
     } 
     getPhotos(){

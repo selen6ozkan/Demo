@@ -10,7 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommentRepository } from './model/commentRepository';
 import { DataService } from './model/dataService';
 
-import { SlickCarouselModule } from 'ngx-slick-carousel';
+
 
 
 @NgModule({
@@ -23,8 +23,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    HttpClientModule,
-    SlickCarouselModule
+    HttpClientModule
   ],
   providers: [
     CommentRepository,
