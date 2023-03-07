@@ -13,17 +13,11 @@ export class DataService {
     commentApiUrl='https://jsonplaceholder.typicode.com/comments';
 
     constructor(private http:HttpClient){
-      
-      function groupBy(collection: any[], key: string) {
-        return collection.reduce((acc, item) => {
-          const group = item[key];
-          acc[group] = acc[group] || [];
-          acc[group].push(item);
-          return acc;
-        }, {});
-      }
+
     }
-    getAlbums():Observable<Album[]>{
+
+    
+      getAlbums():Observable<Album[]>{
         return this.http.get<Album[]>(this.albumApiUrl)
       }
       
@@ -34,11 +28,7 @@ export class DataService {
       getComments():Observable<Comment[]>{
         return this.http.get<Comment[]>(this.commentApiUrl)
       }
-
-
-      
-    
-      
+ 
 }
 
 

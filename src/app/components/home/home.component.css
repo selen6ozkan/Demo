@@ -1,9 +1,22 @@
+.content-fluid{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.row{
+    display: flex;
+    
+}
 .main-container{
     display: flex;
     justify-content:space-evenly;
     background-color: #E5E5E5;
     padding: 20px 0;
+    position: relative;
 
+}
+.main-cooment{
+    display: inline;
 }
 .card{
     border-radius: 20px;
@@ -31,12 +44,34 @@
    cursor: pointer;
 
 }
+.slider{
+    position: relative;
+    background-color: antiquewhite;
+}
+.card-slider{
+position: absolute;
+
+border-radius: 15px;
+}
+.card-slider-title{
+    margin: 20px ;
+    font-weight: bold;
+}
+.card-slider-body{
+    display: inline-block;
+}
+.carousel{
+    position: absolute;
+}
 
 .profile span{
-    margin-left: 30px;
+    margin-left: 20px;
+    vertical-align:middle;
+}
+.message{
+    text-align: justify;
 }
 .card-comment{
-
 }
 .card-comment p{
     /* color: #46466599; */

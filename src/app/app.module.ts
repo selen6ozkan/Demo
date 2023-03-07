@@ -7,8 +7,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import { AlbumRepository } from './model/albumRepository';
-import { PhotoRepository } from './model/photoRepository';
 import { CommentRepository } from './model/commentRepository';
 import { DataService } from './model/dataService';
 
@@ -29,8 +27,6 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     SlickCarouselModule
   ],
   providers: [
-    AlbumRepository,
-    PhotoRepository,
     CommentRepository,
     DataService
     
