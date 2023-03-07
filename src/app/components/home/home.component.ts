@@ -20,7 +20,19 @@ export class HomeComponent implements OnInit  {
   comments:Comment[]=[];
   items: any[];
 
+  deneme:any[];
+  
 
+
+  images = [
+    { url: "https://via.placeholder.com/600/92c952", alt: 'Image 1' },
+    { url: "https://via.placeholder.com/600/92c952", alt: 'Image 2' },
+    { url: "https://via.placeholder.com/600/92c952", alt: 'Image 3' },
+    { url: "https://via.placeholder.com/600/92c952", alt: 'Image 4' },
+    { url: "https://via.placeholder.com/600/92c952", alt: 'Image 5' },
+    { url: "https://via.placeholder.com/600/92c952", alt: 'Image 6' }
+   
+  ];
   constructor(private dataService:DataService){}
 
     ngOnInit(): void{
@@ -42,6 +54,15 @@ export class HomeComponent implements OnInit  {
              photos:filteredPhotos
            }
           })
+
+          this.deneme = this.photos.map(photo => {
+            const filteredAlbums = this.albums.filter(album => album.id === photo.albumId);
+           return{
+            photoTitle:photo.title,
+            photoUrl:photo.url
+           }
+          })
+
 
           console.log(this.items);
         })   

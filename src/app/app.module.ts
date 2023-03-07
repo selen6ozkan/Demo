@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { CommentRepository } from './model/commentRepository';
 import { DataService } from './model/dataService';
-
+import { CarouselModule} from 'primeng/carousel';
 
 
 
@@ -19,11 +19,13 @@ import { DataService } from './model/dataService';
     NavbarComponent,
     FooterComponent,
     HomeComponent,
+
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    CarouselModule
   ],
   providers: [
     CommentRepository,

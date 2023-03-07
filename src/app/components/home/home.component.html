@@ -82,8 +82,13 @@
 
     <div class="col-lg-5 col-md-3 col-sm-12 slider">
       <div class="card-slider">
-        <div class="card-slider-title" *ngFor="let item of items">
-          <h6>{{item.title}}</h6>
+        <div class="card-slider-title">
+          <!-- <h6>{{item.title}}</h6> -->
+
+          
+
+
+
           <!-- <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
             <div ngxSlickItem class="slide">
               <img src="{{item.filteredPhotos}}" alt="" width="100%">
@@ -93,11 +98,16 @@
           
 
         </div>
-        <!-- <div class="card-slider-body" *ngFor="let item of items">
+         <div class="card-slider-body" *ngFor="let item of items">
+          <p-carousel [value]="deneme">
+            <ng-template let-image pTemplate="item">
+              <img src = "{{image.photoUrl}}" alt="{{image.photoTitle}}" width="100px">
+            </ng-template>
+          </p-carousel>
 
           
 
-        </div> -->
+        </div>  
       </div>
     </div>
     <div class="col-md-3">
