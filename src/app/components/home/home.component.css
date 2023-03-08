@@ -1,6 +1,4 @@
 .content-fluid{
-    display: flex;
-    justify-content: center;
     overflow: hidden;
 }
 .row{
@@ -15,13 +13,24 @@
     position: relative;
 
 }
-.main-cooment{
-    display: inline;
-}
+
 .card{
     border-radius: 20px;
     border-style: none;
+    background-color: #fff;
 }
+.main-comment .news{
+    display: block;
+}
+@media only screen and (max-width: 1023px) {
+    .card {
+     font-size: 10px;
+    }
+    .news{
+        display: none;
+    }
+}
+
 .card-title{
     margin: 20px ;
     font-weight: bold;
@@ -46,20 +55,19 @@
 }
 .slider{
     position: relative;
-    background-color: antiquewhite;
-}
-.card-slider{
-position: absolute;
 
-border-radius: 15px;
 }
+
 .card-slider-title{
+    border-radius: 15px;
     margin: 20px ;
     font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    height: 200px;
+    text-align: center;
+    align-items: center;
 }
-.card-slider-body{
-width: 900px;
-}
+
 .carousel{
     position: absolute;
 }
@@ -72,11 +80,8 @@ width: 900px;
     text-align: justify;
 }
 .card-comment{
+    text-align: center;
 }
-.card-comment p{
-    /* color: #46466599; */
-}
-
 
 
   
