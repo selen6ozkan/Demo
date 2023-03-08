@@ -80,37 +80,26 @@
       </div>
     </div>
 
-    <div class="col-lg-5 col-md-3 col-sm-12 slider">
+    <div class="col-lg-9 col-md-3 col-sm-12 slider">
       <div class="card-slider">
-        <div class="card-slider-title">
-          <!-- <h6>{{item.title}}</h6> -->
-
-          
+        <div class="card-slider-title" *ngFor="let item of items">
+          <h6>{{item.title}}</h6> 
 
 
-
-          <!-- <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
-            <div ngxSlickItem class="slide">
-              <img src="{{item.filteredPhotos}}" alt="" width="100%">
-            </div>
-          </ngx-slick-carousel> 
-        -->
           
 
         </div>
-         <div class="card-slider-body" *ngFor="let item of items">
-          <p-carousel [value]="deneme">
+          <div class="card-slider-body">
+          <p-carousel [value]="items | slice:0:5">
             <ng-template let-image pTemplate="item">
-              <img src = "{{image.photoUrl}}" alt="{{image.photoTitle}}" width="100px">
+              <img src = "{{image.url}}" alt="{{image.title}}" width="100px">
             </ng-template>
           </p-carousel>
 
-          
-
-        </div>  
+        </div>   
       </div>
     </div>
-    <div class="col-md-3">
+     <div class="col-md-3">
       <div class="card">
         <h3 class="card-title">On Trending</h3>
         <div class="card-body">
@@ -381,6 +370,6 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> 
 
   </div>

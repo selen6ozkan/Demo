@@ -58,7 +58,7 @@ border-radius: 15px;
     font-weight: bold;
 }
 .card-slider-body{
-    display: inline-block;
+width: 900px;
 }
 .carousel{
     position: absolute;
